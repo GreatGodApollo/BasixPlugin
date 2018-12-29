@@ -1,0 +1,21 @@
+name: Basix
+version: ${project.version}
+main: me.brettbender.basix.Basix
+prefix: Basix
+authors: [GreatGodApollo]
+description: The essential commands, back to basix
+website: brettbender.me
+commands:
+  gamemode:
+    description: Change gamemodes
+    aliases: [gm]
+    usage: /<command> <gamemode> [player]
+  suicide:
+    description: Kill yourself
+    usage: /<command>
+  fly:
+    description: Enable fly mode
+    usage: /<command>
+  motd:
+    description: Get/Set/Enable/Disable the MOTD
+    usage: /<command> [set <message>|enable|disable]

@@ -1,0 +1,6 @@
+# config.yml of the Basix plugin created by GreatGodApollo.
+
+motd:
+  enabled: true
+  # MineCraft color codes can be used by using an `&` followed by the color code, ie: &c
+  msg: '&4Please set this message using /motd set'
