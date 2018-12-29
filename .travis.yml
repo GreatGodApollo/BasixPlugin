@@ -1,5 +1,10 @@
 language: java
+
+script:
+  - 'mvn clean package'
+
 deploy:
   provider: surge
   project: ./target/
   domain: basixplugin.surge.sh
+  skip_cleanup: true
