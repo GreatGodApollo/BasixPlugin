@@ -64,6 +64,9 @@ public abstract class BasixCommand implements CommandExecutor {
 
         // motd
         new MOTDCommand();
+
+        // warp
+        new WarpCommand();
     }
 
 

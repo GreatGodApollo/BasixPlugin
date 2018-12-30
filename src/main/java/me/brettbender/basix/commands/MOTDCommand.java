@@ -1,5 +1,6 @@
 package me.brettbender.basix.commands;
 
+import me.brettbender.basix.managers.SettingsManager;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -19,8 +20,8 @@ public class MOTDCommand extends BasixCommand {
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        plugin.reloadConfig();
-        FileConfiguration config = plugin.getConfig();
+        SettingsManager settingsManager = SettingsManager.getInstance();
+        FileConfiguration config = settingsManager.getConfig();
         ConfigurationSection motdConfigSection = config.getConfigurationSection("motd");
         if (args.length == 0 && isEnabled) {
             sender.sendMessage(parseColoredString(motdConfigSection.getString("msg", "&cConfiguration value not found!")));
@@ -35,7 +36,7 @@ public class MOTDCommand extends BasixCommand {
                         } else {
                             isEnabled = true;
                             motdConfigSection.set("enabled", true);
-                            plugin.saveConfig();
+                            settingsManager.saveConfig();
                             sender.sendMessage(successColor + "MOTD Enabled.");
                             break;
                         }
@@ -47,7 +48,7 @@ public class MOTDCommand extends BasixCommand {
                         if (isEnabled) {
                             isEnabled = false;
                             motdConfigSection.set("enabled", false);
-                            plugin.saveConfig();
+                            settingsManager.saveConfig();
                             sender.sendMessage(successColor + "MOTD Disabled.");
                             break;
                         } else {
@@ -61,12 +62,10 @@ public class MOTDCommand extends BasixCommand {
                     if (checkPermission(sender, "motd.set", true, errorColor)) {
                         if (args.length >= 2) {
                             String[] subArgs = new String[args.length - 1];
-                            for (int i = 0; i <= args.length - 2; i ++) {
-                                subArgs[i] = args[i + 1];
-                            }
+                            System.arraycopy(args, 1, subArgs, 0, args.length - 1);
                             String newMsg = String.join(" ", subArgs);
                             motdConfigSection.set("msg", newMsg);
-                            plugin.saveConfig();
+                            settingsManager.saveConfig();
                             sender.sendMessage(successColor + "Updated MOTD.");
                             break;
                         } else {

@@ -1,9 +1,9 @@
 package me.brettbender.basix;
 
-import me.brettbender.basix.commands.GameModeCommand;
 import me.brettbender.basix.handlers.CommandHandler;
-import me.brettbender.basix.handlers.ConfigHandler;
 import me.brettbender.basix.handlers.ListenerHandler;
+import me.brettbender.basix.managers.SettingsManager;
+import me.brettbender.basix.managers.SuicideManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,7 +20,8 @@ public final class Basix extends JavaPlugin {
         // Plugin startup logic
         plugin = this;
         CommandHandler.registerCommands(plugin);
-        ConfigHandler.initialize(plugin);
+        SettingsManager.getInstance().setup(plugin);
+        SuicideManager.getInstance().setup(plugin);
         ListenerHandler.registerListeners(plugin);
         Bukkit.getLogger().info(logPrefix + "Plugin Loaded");
     }

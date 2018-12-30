@@ -19,3 +19,6 @@ commands:
   motd:
     description: Get/Set/Enable/Disable the MOTD
     usage: /<command> [set <message>|enable|disable]
+  warp:
+    description: Go to/Set/Delete a warp
+    usage: /<command> [set|del] <warpname>
