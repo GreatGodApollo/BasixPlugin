@@ -22,3 +22,6 @@ commands:
   warp:
     description: Go to/Set/Delete a warp
     usage: /<command> [set|del] <warpname>
+  home:
+    description: Go to/Set your home
+    usage: /<command> [set|player]

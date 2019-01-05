@@ -18,7 +18,6 @@ public class WarpCommand extends BasixCommand {
 
     @Override
     public void execute(CommandSender sender, String[] args) {
-        SettingsManager settingsManager = SettingsManager.getInstance();
         settingsManager.reloadData();
         FileConfiguration data = settingsManager.getData();
         Player player = (Player) sender;

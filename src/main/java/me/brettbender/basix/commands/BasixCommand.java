@@ -1,5 +1,6 @@
 package me.brettbender.basix.commands;
 
+import me.brettbender.basix.managers.SettingsManager;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -17,6 +18,7 @@ public abstract class BasixCommand implements CommandExecutor {
     static ChatColor errorColor = ChatColor.RED;
     static ChatColor successColor = ChatColor.GREEN;
     static JavaPlugin plugin;
+    static SettingsManager settingsManager;
 
     public abstract void execute(CommandSender sender, String[] args);
 
@@ -53,6 +55,9 @@ public abstract class BasixCommand implements CommandExecutor {
 
     public static void registerCommands(JavaPlugin pl) {
         plugin = pl;
+
+        settingsManager = SettingsManager.getInstance();
+
         // gamemode
         new GameModeCommand();
 
@@ -67,6 +72,9 @@ public abstract class BasixCommand implements CommandExecutor {
 
         // warp
         new WarpCommand();
+
+        // home
+        new HomeCommand();
     }
 
 
