@@ -1,3 +1,8 @@
+/*
+ * Basix Bukkit Plugin
+ * Copyright (C) 2019 Brett Bender
+ */
+
 package me.brettbender.basix;
 
 import me.brettbender.basix.handlers.CommandHandler;

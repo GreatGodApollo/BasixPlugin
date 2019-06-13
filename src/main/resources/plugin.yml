@@ -4,7 +4,7 @@ main: me.brettbender.basix.Basix
 prefix: Basix
 authors: [GreatGodApollo]
 description: The essential commands, back to basix
-website: brettbender.me
+website: https://github.com/GreatGodApollo/BasixPlugin
 commands:
   gamemode:
     description: Change gamemodes

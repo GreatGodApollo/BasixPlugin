@@ -1,3 +1,8 @@
+/*
+ * Basix Bukkit Plugin
+ * Copyright (C) 2019 Brett Bender
+ */
+
 package me.brettbender.basix.listeners;
 
 import me.brettbender.basix.managers.SuicideManager;
