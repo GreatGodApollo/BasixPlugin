@@ -26,8 +26,13 @@ public class HomeCommand extends BasixCommand {
 
             if (args.length == 0) {
                 if (checkPermission(sender, "home.tp", true, errorColor)) {
-                    ConfigurationSection sect = data.getConfigurationSection("home." + senderPlayer.getUniqueId() + ".default");
-                    if (sect.get("world") == null) {
+                    ConfigurationSection sect;
+                    try {
+                        sect = data.getConfigurationSection("home." + senderPlayer.getUniqueId() + ".default");
+                    } catch(Exception e){
+                        sect = null;
+                    }
+                    if (sect == null || sect.get("world") == null) {
                         sender.sendMessage(errorColor + "You do not have a home set!");
                     } else {
                         tp(senderPlayer, sect);
