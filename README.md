@@ -1,5 +1,5 @@
 # Basix
-[![Build Status](http://moon.brettbender.me:8080/buildStatus/icon?job=BasixPlugin)](http://moon.brettbender.me:8080/job/BasixPlugin/)
+[![Build Status](http://moon.brettbender.me:8080/job/BasixPlugin/badge/icon)](http://moon.brettbender.me:8080/job/BasixPlugin/)
 ## By: Brett Bender
 
 My take on the essentials of running a spigot server
