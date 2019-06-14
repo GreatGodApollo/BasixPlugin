@@ -1,3 +1,6 @@
+# THIS REPOSITORY HAS MOVED
+This repository has now moved to my personal [Bitbucket](https://git.brettbender.me/projects/BASIX/repos/basixplugin/).
+
 # Basix
 
 Basix is a Minecraft plugin I designed to replace the parts of Essentials I use most
