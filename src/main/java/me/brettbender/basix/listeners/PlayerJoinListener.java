@@ -23,9 +23,9 @@ public class PlayerJoinListener implements Listener {
         ConfigurationSection motdConfig = config.getConfigurationSection("motd");
         boolean motdEnabled = motdConfig.getBoolean("enabled", true);
         if (motdEnabled) {
-            String motdMsg = motdConfig.getString("msg", "&cConfiguration value not found!");
-            motdMsg = parseColoredString(motdMsg);
-            event.getPlayer().sendMessage(motdMsg);
+            String msg = parseColoredString(motdConfig.getString("msg", "&cConfiguration value not found!")).replace("%n", "\n");
+            String[] msgs = msg.split("\\n");
+            event.getPlayer().sendMessage(msgs);
         }
 
     }

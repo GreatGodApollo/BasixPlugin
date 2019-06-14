@@ -28,7 +28,9 @@ public class MOTDCommand extends BasixCommand {
         FileConfiguration config = settingsManager.getConfig();
         ConfigurationSection motdConfigSection = config.getConfigurationSection("motd");
         if (args.length == 0 && isEnabled) {
-            sender.sendMessage(parseColoredString(motdConfigSection.getString("msg", "&cConfiguration value not found!")));
+            String msg = parseColoredString(motdConfigSection.getString("msg", "&cConfiguration value not found!")).replace("%n", "\n");;
+            String[] msgs = msg.split("\\n");
+            sender.sendMessage(msgs);
             return;
         } if (args.length >= 1) {
             switch (args[0]) {

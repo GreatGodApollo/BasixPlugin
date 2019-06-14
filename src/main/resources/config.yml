@@ -1,6 +1,8 @@
 # config.yml of the Basix plugin created by GreatGodApollo.
-# MineCraft color codes can be used by using an `&` followed by the color code, ie: &c
+# Minecraft color codes can be used by using an `&` followed by the color code, ie: &c
 
+
+# Newlines in the MSG can be done with `%n`
 motd:
   enabled: true
   msg: '&4Please set this message using /motd set'
