@@ -25,3 +25,6 @@ commands:
   home:
     description: Go to/Set your home
     usage: /<command> [set|player]
+  heal:
+    description: Heal yourself
+    usage: /<command>

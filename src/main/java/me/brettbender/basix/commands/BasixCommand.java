@@ -80,6 +80,9 @@ public abstract class BasixCommand implements CommandExecutor {
 
         // home
         new HomeCommand();
+
+        // speed
+        new HealCommand();
     }
 
 

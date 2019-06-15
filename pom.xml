@@ -6,7 +6,7 @@
 
     <groupId>me.brettbender</groupId>
     <artifactId>basix</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
     <packaging>jar</packaging>
 
     <name>Basix</name>
