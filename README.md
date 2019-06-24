@@ -1,5 +1,7 @@
 # Basix
 
+[![Build Status](https://ci.brettbender.me/job/BasixPlugin/badge/icon?style=flat-square)](https://ci.brettbender.me/job/BasixPlugin/) [![GitHub release](https://img.shields.io/github/release/GreatGodApollo/BasixPlugin.svg?style=flat-square)](https://github.com/GreatGodApollo/BasixPlugin/releases)
+
 Basix is a Minecraft plugin I designed to replace the parts of Essentials I use most
 
 ## Installation
